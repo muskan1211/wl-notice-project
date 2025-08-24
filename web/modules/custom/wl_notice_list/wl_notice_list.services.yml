@@ -1,0 +1,4 @@
+services:
+  wl_notice_list.api_client:
+    class: Drupal\wl_notice_list\Service\GazetteApiService
+    arguments: ['@http_client', '@logger.channel.default']

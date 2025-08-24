@@ -89,7 +89,12 @@
         "league/commonmark": "^2.4"
     },
     "require-dev": {
-        "drush/drush": "^13"
+        "behat/mink": "^1.12",
+        "behat/mink-browserkit-driver": "^2.2",
+        "drush/drush": "^13",
+        "phpspec/prophecy-phpunit": "^2.0",
+        "phpunit/phpunit": "^10",
+        "symfony/browser-kit": "^7.3"
     },
     "conflict": {
         "drupal/drupal": "*"

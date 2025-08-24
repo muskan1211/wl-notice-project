@@ -860,3 +860,5 @@ $databases['default']['default'] = array (
   'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
 );
 $settings['config_sync_directory'] = 'sites/default/files/config_yxynVRt1NNIR7AWI6m88q8VlkelJQ6MWiEosWWfEdmEbe3KqCsa5f0Fd9nhgf_N9VfOuP3lTLg/sync';
+$config['system.logging']['error_level'] = 'verbose';
+$settings['container_yamls'][] = DRUPAL_ROOT . '/sites/development.services.yml';

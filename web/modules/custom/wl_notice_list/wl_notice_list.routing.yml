@@ -1,0 +1,7 @@
+wl_notice_list.wl_notice:
+  path: '/wl-notice'
+  defaults:
+    _controller: '\Drupal\wl_notice_list\Controller\NoticeController::listNotices'
+    _title: 'The WL Notices'
+  requirements:
+    _permission: 'access content'
