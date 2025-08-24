@@ -1,0 +1,52 @@
+# ========================================================================
+# Drupal 10 (Composer-based) .gitignore
+# ========================================================================
+
+# Ignore sensitive and environment-specific settings.
+sites/*/settings.php
+sites/*/settings.local.php
+sites/*/services.yml
+
+# Ignore all private and public file directories.
+sites/*/files
+sites/*/files/**
+sites/*/private
+
+# ========================================================================
+# Core & Vendor (Managed via Composer)
+# ========================================================================
+/core
+/vendor
+
+# ========================================================================
+# Contributed modules, themes, profiles (Managed via Composer)
+/modules/contrib/
+/themes/contrib/
+/profiles/contrib/
+
+# Ignore Composer files you don't want in version control (optional)
+/composer.lock
+/web/core/assets/
+/web/core/modules/system/tests
+
+# ========================================================================
+# Cache, logs & temporary files
+# ========================================================================
+tmp/
+temp/
+cache/
+*.cache
+*.log
+
+# ========================================================================
+# Frontend build (if applicable)
+/node_modules/
+/npm-debug.log
+/yarn-error.log
+/package-lock.json
+
+# ========================================================================
+# IDE / OS files
+.idea/
+.vscode/
+*.swp
