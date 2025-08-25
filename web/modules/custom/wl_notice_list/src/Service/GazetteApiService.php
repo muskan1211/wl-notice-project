@@ -18,8 +18,8 @@ class GazetteApiService {
     $this->logger = $logger;
   }
 
-  public function getNotices() {
-    $url = 'https://www.thegazette.co.uk/all-notices/notice/data.json';
+  public function getNotices($url) {
+
     try {
       $response = $this->httpClient->request('GET', $url, ['timeout' => 5]);
       $data = json_decode($response->getBody(), TRUE);

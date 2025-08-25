@@ -42,11 +42,11 @@ class NoticeController extends ControllerBase {
   public function listNotices() {
     // Current page from query param.
     $current_page = $this->pagerParams->findPage();
-    $limit = 5;
+    $limit = 10;
     $offset = $current_page * $limit;
 
     // Fetch API data.
-    $data = $this->apiService->getNotices();
+    $data = $this->apiService->getNotices('https://www.thegazette.co.uk/all-notices/notice/data.json');
     $total = count($data);
     $paged_data = array_slice($data, $offset, $limit);
 
@@ -65,7 +65,7 @@ class NoticeController extends ControllerBase {
     $build['notices'] = [
       '#theme' => 'item_list',
       '#items' => $items,
-      '#attributes' => ['class' => ['gazette-list']],
+      '#attributes' => ['class' => ['wl-gazette-notice-list']],
     ];
 
     // Add Drupal pager.
